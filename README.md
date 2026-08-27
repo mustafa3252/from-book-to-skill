@@ -169,10 +169,12 @@ from-book-to-skill ships **no book content** — not a single page. It's a conve
 
 ---
 
-## 🙏 Credit
-
-This project is a fork of [book-to-skill](https://github.com/virgiliojr94/book-to-skill) by [virgiliojr94](https://github.com/virgiliojr94) — the extractor, the generator spec, the benchmarks, and most of the tests are their work. If this tool is useful to you, consider [sponsoring the original author](https://github.com/sponsors/virgiliojr94).
-
 ## License
 
 MIT — applies to the converter (code + skill definition) in this repository, **not** to any book or document you process with it. See [LICENSE.md](LICENSE.md) for both the upstream and fork copyright notices.
+
+---
+
+## 🙏 Credit
+
+This project is a fork of **[book-to-skill](https://github.com/virgiliojr94/book-to-skill)** by **[virgiliojr94](https://github.com/virgiliojr94)** — the extractor, the generator spec, the benchmarks, and most of the tests are their work; this fork only adds the flashcards/quiz layer on top. If this tool is useful to you, consider [sponsoring the original author](https://github.com/sponsors/virgiliojr94).
