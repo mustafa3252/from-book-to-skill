@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="#-whats-different-in-this-fork">What's different</a> ·
+  <a href="#-active-recall-flashcards">Flashcards</a> ·
   <a href="#-what-it-generates">What it generates</a> ·
   <a href="docs/how-it-works.md">How it works</a> ·
   <a href="docs/usage.md">Usage</a> ·
@@ -29,15 +29,13 @@
 
 ---
 
-## 🃏 What's different in this fork
+## 🃏 Active-recall flashcards
 
-Reading a book once gets you recognition; being *asked about it* gets you recall. Upstream book-to-skill solves the reference problem — "answer from the actual book, don't hallucinate." This fork adds the study problem:
+Reading a book once gets you recognition; being *asked about it* gets you recall. The converter solves the reference problem — "answer from the actual book, don't hallucinate." The flashcards layer adds the study problem:
 
 - **`flashcards.md` in every generated skill** — 3–6 active-recall cards per chapter. Questions force retrieval ("under which three conditions does X fail?"), not recognition ("what is X?"); definitions stay in the glossary where they belong.
 - **A quiz protocol** — say `quiz me` (or `quiz me on ch05`) to the generated skill and it asks one question at a time, waits for your attempt, then shows the answer with a chapter reference to go re-read. It never dumps the deck.
 - **Fold-in aware** — updating a skill with new sources extends the deck for the new chapters.
-
-Everything else — the deterministic extractor, the 24×–51× token savings over context-dumping, the multi-format support — is upstream's work, unchanged in spirit.
 
 ---
 
@@ -73,7 +71,7 @@ If you re-open a document often enough to wish you'd memorized it, it's a candid
 
 ## ⚙️ How it works
 
-Two halves: a deterministic Python **extractor** (document → clean text + metadata) and a spec-driven **generator** (your agent follows `SKILL.md` to turn that into a structured skill). On-demand chapter files keep the loaded skill small — **24×–51× fewer tokens** than dumping the book into context, as measured upstream on real books.
+Two halves: a deterministic Python **extractor** (document → clean text + metadata) and a spec-driven **generator** (your agent follows `SKILL.md` to turn that into a structured skill). On-demand chapter files keep the loaded skill small — **24×–51× fewer tokens** than dumping the book into context, as measured on real books.
 
 🔧 **Full walkthrough (Steps 0–10, extraction modes, token budgets) → [docs/how-it-works.md](docs/how-it-works.md)**
 📊 **Methodology and per-book tables → [docs/performance.md](docs/performance.md)**
@@ -166,10 +164,4 @@ from-book-to-skill ships **no book content** — not a single page. It's a conve
 
 ## License
 
-MIT — applies to the converter (code + skill definition) in this repository, **not** to any book or document you process with it. See [LICENSE.md](LICENSE.md) for both the upstream and fork copyright notices.
-
----
-
-## 🙏 Credit
-
-This project is a fork of **[book-to-skill](https://github.com/virgiliojr94/book-to-skill)** by **[virgiliojr94](https://github.com/virgiliojr94)** — the extractor, the generator spec, the benchmarks, and most of the tests are their work; this fork only adds the flashcards/quiz layer on top. If this tool is useful to you, consider [sponsoring the original author](https://github.com/sponsors/virgiliojr94).
+MIT — applies to the converter (code + skill definition) in this repository, **not** to any book or document you process with it. See [LICENSE.md](LICENSE.md) for the full copyright notices.
