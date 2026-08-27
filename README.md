@@ -11,11 +11,6 @@
 </p>
 
 <p align="center">
-  A fork of <a href="https://github.com/virgiliojr94/book-to-skill"><strong>book-to-skill</strong> by virgiliojr94</a> — all credit for the converter, extractor, and benchmarks goes upstream.<br>
-  The twist here: every generated skill also ships an <strong>active-recall flashcard deck</strong>, so the skill doesn't just answer questions — it asks them.
-</p>
-
-<p align="center">
   <a href="#-whats-different-in-this-fork">What's different</a> ·
   <a href="#-what-it-generates">What it generates</a> ·
   <a href="docs/how-it-works.md">How it works</a> ·
